@@ -3,21 +3,6 @@ import { useReactTable, getCoreRowModel, flexRender, getFilteredRowModel } from 
 
 const BasicTable = ({ data, columns, filtering, setFiltering }) => {
 
-//   const [openRow, setOpenRow] = useState(null);
-//   const popupRef = useRef(null);
-
-//   useEffect(() => {
-//     const handleClickOutside = (event) => {
-//       if (popupRef.current && !popupRef.current.contains(event.target)) {
-//         setOpenRow(null);
-//       }
-//     };
-//     document.addEventListener("mousedown", handleClickOutside);
-//     return () => {
-//       document.removeEventListener("mousedown", handleClickOutside);
-//     };
-//   }, []);
-
   const table = useReactTable({
     data,
     columns: [
