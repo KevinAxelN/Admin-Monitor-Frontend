@@ -13,7 +13,6 @@ function AttendaceByUser() {
 
   const query = new URLSearchParams(useLocation().search);
   const userIdGet = query.get("id"); 
-  console.log("User ID:", userIdGet);
 
   const userId = localStorage.getItem('userId');
   const navigate = useNavigate();
@@ -44,7 +43,6 @@ function AttendaceByUser() {
           }
         );
 
-        console.log('RES: ', response);
         if (response.data) {
           setData(response.data);
         } else {
@@ -106,7 +104,7 @@ function AttendaceByUser() {
       const response = await axios.post("http://localhost:8080/getPictureById", { p_id: id });
   
       if (response.data.picture) {
-        setSelectedImage(response.data.picture); // Simpan gambar ke state
+        setSelectedImage(response.data.picture); 
       } else {
         alert("Attendance Picture not found!");
       }

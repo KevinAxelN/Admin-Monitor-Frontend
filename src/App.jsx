@@ -29,9 +29,6 @@ function App() {
         <Route path="/" element={
           isAuthenticated ? <Navigate to="/monitor" /> : <Navigate to="/login" />
         } />
-        {/* <Route path="/" element={
-          isAuthenticated ? <Navigate to="/monitor" /> : <Login setIsAuthenticated={setIsAuthenticated} setUserId={setUserId} />
-        } /> */}
         <Route path="/monitor" element={
           isAuthenticated ? <Monitor userId={userId} /> : <Navigate to="/" />
         } />

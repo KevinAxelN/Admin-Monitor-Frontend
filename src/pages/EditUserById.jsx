@@ -14,7 +14,6 @@ function EditUserById() {
 
   const query = new URLSearchParams(useLocation().search);
   const userIdGet = query.get("id"); 
-  console.log("User ID:", userIdGet);
 
   const userId = localStorage.getItem('userId');
   const navigate = useNavigate();
@@ -226,27 +225,6 @@ function EditUserById() {
         </form>
       </div>
 
-      {/* <ConfirmationModal
-        isOpen={showCheckinModal}
-        onClose={() => setShowCheckinModal(false)}
-        onConfirm={() => {
-          handleCheckin();
-          setShowCheckinModal(false);
-        }}
-        title="Check-in Confirmation"
-        message="Are you sure you want to check in with this picture?"
-        imagePreview={imagePreview}
-      /> */}
-      {/* <ConfirmationModal
-        isOpen={showCheckoutModal}
-        onClose={() => setShowCheckoutModal(false)}
-        onConfirm={() => {
-          handleCheckout();
-          setShowCheckoutModal(false);
-        }}
-        title="Check-out Confirmation"
-        message="Are you sure you want to check out?"
-      /> */}
       <InformationModal
         show={showInformationModal}
         onHide={() => setShowInformationModal(false)}

@@ -177,7 +177,7 @@ function Monitor() {
             <button
               onClick={() => {
                 navigate(`/createUser`);
-              }} // Ganti dengan fungsi yang sesuai
+              }} 
               className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md transition-all 
                         hover:bg-blue-700 focus:ring-4 focus:ring-blue-300"
             >

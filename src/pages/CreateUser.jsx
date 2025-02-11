@@ -1,13 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-import ConfirmationModal from "../components/ConfirmationModal";
 import InformationModal from '../components/InformationModal';
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import SuccessModal from '../components/SuccessModal';
 import LoadingOverlay from '../components/LoadingOverlay';
 import { useNavigate } from 'react-router-dom';
-import { useLocation } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react"; 
 
 function CreateUser() {
@@ -179,27 +177,6 @@ function CreateUser() {
         </form>
       </div>
 
-      {/* <ConfirmationModal
-        isOpen={showCheckinModal}
-        onClose={() => setShowCheckinModal(false)}
-        onConfirm={() => {
-          handleCheckin();
-          setShowCheckinModal(false);
-        }}
-        title="Check-in Confirmation"
-        message="Are you sure you want to check in with this picture?"
-        imagePreview={imagePreview}
-      /> */}
-      {/* <ConfirmationModal
-        isOpen={showCheckoutModal}
-        onClose={() => setShowCheckoutModal(false)}
-        onConfirm={() => {
-          handleCheckout();
-          setShowCheckoutModal(false);
-        }}
-        title="Check-out Confirmation"
-        message="Are you sure you want to check out?"
-      /> */}
       <InformationModal
         show={showInformationModal}
         onHide={() => setShowInformationModal(false)}
