@@ -137,7 +137,6 @@ function AttendaceByUser() {
         </h2>
       </div>
 
-      {/* <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md mx-auto"> */}
       <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-2xl mx-auto">
 
 
@@ -186,27 +185,6 @@ function AttendaceByUser() {
 
       </div>
 
-      {/* <ConfirmationModal
-        isOpen={showCheckinModal}
-        onClose={() => setShowCheckinModal(false)}
-        onConfirm={() => {
-          handleCheckin();
-          setShowCheckinModal(false);
-        }}
-        title="Check-in Confirmation"
-        message="Are you sure you want to check in with this picture?"
-        imagePreview={imagePreview}
-      /> */}
-      {/* <ConfirmationModal
-        isOpen={showCheckoutModal}
-        onClose={() => setShowCheckoutModal(false)}
-        onConfirm={() => {
-          handleCheckout();
-          setShowCheckoutModal(false);
-        }}
-        title="Check-out Confirmation"
-        message="Are you sure you want to check out?"
-      /> */}
       <InformationModal
         show={showInformationModal}
         onHide={() => setShowInformationModal(false)}

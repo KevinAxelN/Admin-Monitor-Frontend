@@ -160,12 +160,6 @@ function Monitor() {
           
           <div className="text-xl font-semibold mb-2">{date}</div>
 
-          {/* <input
-            className="mb-4 p-2 border rounded w-full"
-            placeholder="Search username..."
-            value={filtering}
-            onChange={(e) => setFiltering(e.target.value)}
-          /> */}
           <div className="flex items-center gap-4 mb-4">
             <input
               className="p-2 border rounded w-full"
@@ -191,27 +185,6 @@ function Monitor() {
       
       </div>
 
-      {/* <ConfirmationModal
-        isOpen={showCheckinModal}
-        onClose={() => setShowCheckinModal(false)}
-        onConfirm={() => {
-          handleCheckin();
-          setShowCheckinModal(false);
-        }}
-        title="Check-in Confirmation"
-        message="Are you sure you want to check in with this picture?"
-        imagePreview={imagePreview}
-      /> */}
-      {/* <ConfirmationModal
-        isOpen={showCheckoutModal}
-        onClose={() => setShowCheckoutModal(false)}
-        onConfirm={() => {
-          handleCheckout();
-          setShowCheckoutModal(false);
-        }}
-        title="Check-out Confirmation"
-        message="Are you sure you want to check out?"
-      /> */}
       <InformationModal
         show={showInformationModal}
         onHide={() => setShowInformationModal(false)}
