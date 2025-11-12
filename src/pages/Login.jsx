@@ -21,21 +21,11 @@ function Login({ setIsAuthenticated, setUserId }) {
     setIsLoading(true);
 
     if (!username || !password ) {
-      // alert('Username atau password wajib diisi');
       setErrorMessage(`Username and Password are required`);
       setIsLoading(false);
       setShowInformationModal(true);
       return;
     }
-
-    // if (username === 'kevin' && password === '123') {
-    //   setIsAuthenticated(true);
-    //   setUserId(2); // data.userId    
-    //   localStorage.setItem('userId', 2);
-    //   navigate('/monitor');
-    // } else {
-    //   alert('Username or password is incorrect!');
-    // }
 
     try {
       const response = await axios.post('http://localhost:8080/loginAdmin', { username, password });
@@ -46,7 +36,6 @@ function Login({ setIsAuthenticated, setUserId }) {
         localStorage.setItem('userId', data.user.user_id);
         navigate('/monitor');
       } else {
-        // alert('Username or password is incorrect!');
         setErrorMessage(`Username or password is incorrect!`);
         setIsLoading(false);
         setShowInformationModal(true);
@@ -57,7 +46,6 @@ function Login({ setIsAuthenticated, setUserId }) {
       setIsLoading(false);
 
       console.error('Login error:', error);
-      // alert('Something wrong, please try again!');
       setErrorMessage(`${error.response?.data?.error || error.response?.data?.message  || "An error occurred!"}`);
       setIsLoading(false);
       setShowInformationModal(true);
